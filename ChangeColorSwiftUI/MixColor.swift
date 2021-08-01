@@ -9,21 +9,22 @@ import SwiftUI
 
 struct MixColor: View {
     
-    @Binding var redValue: Double
-    @Binding var greenValue: Double
-    @Binding var blueValue: Double
+    let red: Double
+    let green: Double
+    let blue: Double
     
     var body: some View {
-        VStack {
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 400, height: 200)
-                .foregroundColor(Color(red: redValue, green: greenValue, blue: blueValue))
-        }               .padding(.bottom, 100)
+        
+        Color(red: red/255, green: green/255, blue: blue/255)
+            .frame(height: 200)
+            .cornerRadius(30)
+            .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 5))
+        
     }
-}
-
-struct MixColor_Previews: PreviewProvider {
-    static var previews: some View {
-        MixColor(redValue: .constant(0.0), greenValue: .constant(0.0), blueValue: .constant(0.0))
+    
+    struct MixColor_Previews: PreviewProvider {
+        static var previews: some View {
+            MixColor(red: 0, green: 0, blue: 0)
+        }
     }
 }

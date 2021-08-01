@@ -9,23 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var redValue = 0.0
-    @State private var greenValue = 0.0
-    @State private var blueValue = 0.0
+    @State private var redValue = Double.random(in: 0...255)
+    @State private var greenValue = Double.random(in: 0...255)
+    @State private var blueValue = Double.random(in: 0...255)
+    
     
     var body: some View {
         VStack {
-            MixColor(redValue: $redValue, greenValue: $greenValue, blueValue: $blueValue)
+            MixColor(red: redValue, green: greenValue, blue: blueValue)
             HStack {
                 VStack {
-                    ColorSlider(value: $redValue, sliderColor: .red)
-                    ColorSlider(value: $greenValue, sliderColor: .green)
-                    ColorSlider(value: $blueValue, sliderColor: .blue)
+                    ColorSlider(value: $redValue, color: .red)
+                    ColorSlider(value: $greenValue, color: .green)
+                    ColorSlider(value: $blueValue, color: .blue)
                 }
                 VStack {
-                    TextFields()
-                    TextFields()
-                    TextFields()
+                    TextFields(sliderValue: $redValue)
+                    TextFields(sliderValue: $greenValue)
+                    TextFields(sliderValue: $blueValue)
                 }
             }
         }

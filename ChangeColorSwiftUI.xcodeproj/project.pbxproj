@@ -13,7 +13,7 @@
 		BCFA88D026B5E8E9000D2C48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFA88CF26B5E8E9000D2C48 /* Preview Assets.xcassets */; };
 		BCFA88E026B5F631000D2C48 /* MixColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA88DF26B5F631000D2C48 /* MixColor.swift */; };
 		BCFA88E826B5FECB000D2C48 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA88E726B5FECB000D2C48 /* ColorSlider.swift */; };
-		BCFA88EA26B5FF37000D2C48 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA88E926B5FF37000D2C48 /* TextFields.swift */; };
+		BCFA88EC26B647FE000D2C48 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA88EB26B647FE000D2C48 /* TextFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		BCFA88D126B5E8E9000D2C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFA88DF26B5F631000D2C48 /* MixColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixColor.swift; sourceTree = "<group>"; };
 		BCFA88E726B5FECB000D2C48 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
-		BCFA88E926B5FF37000D2C48 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
+		BCFA88EB26B647FE000D2C48 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				BCFA88CA26B5E8E6000D2C48 /* ContentView.swift */,
 				BCFA88DF26B5F631000D2C48 /* MixColor.swift */,
 				BCFA88E726B5FECB000D2C48 /* ColorSlider.swift */,
-				BCFA88E926B5FF37000D2C48 /* TextFields.swift */,
+				BCFA88EB26B647FE000D2C48 /* TextFields.swift */,
 				BCFA88CC26B5E8E9000D2C48 /* Assets.xcassets */,
 				BCFA88D126B5E8E9000D2C48 /* Info.plist */,
 				BCFA88CE26B5E8E9000D2C48 /* Preview Content */,
@@ -147,10 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFA88EC26B647FE000D2C48 /* TextFields.swift in Sources */,
 				BCFA88CB26B5E8E6000D2C48 /* ContentView.swift in Sources */,
 				BCFA88E026B5F631000D2C48 /* MixColor.swift in Sources */,
 				BCFA88E826B5FECB000D2C48 /* ColorSlider.swift in Sources */,
-				BCFA88EA26B5FF37000D2C48 /* TextFields.swift in Sources */,
 				BCFA88C926B5E8E6000D2C48 /* ChangeColorSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

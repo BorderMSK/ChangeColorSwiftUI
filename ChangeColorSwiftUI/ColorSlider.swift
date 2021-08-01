@@ -10,25 +10,20 @@ import SwiftUI
 struct ColorSlider: View {
     
     @Binding var value: Double
-    var sliderColor: Color
+    var color: Color
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("0")
-                Slider(value: $value)
-                .accentColor(sliderColor)
-                Text("255")
-            } .padding(20)
-            Text(
-                String(format: "%.0f", value * 255)
-                )
-        }
+        HStack {
+            Text("0")
+        Slider(value: $value, in: 0...255, step: 1)
+            .accentColor(color)
+            Text("255")
+        } .padding(20)
     }
 }
 
 struct Slider_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSlider(value: .constant(0.0), sliderColor: .red)
+        ColorSlider(value: .constant(0.0), color: .red)
     }
 }
