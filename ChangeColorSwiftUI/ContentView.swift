@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack {
             MixColor(red: redValue, green: greenValue, blue: blueValue)
             HStack {
-                VStack {
+                VStack (spacing: 20) {
                     ColorSlider(value: $redValue, color: .red)
                     ColorSlider(value: $greenValue, color: .green)
                     ColorSlider(value: $blueValue, color: .blue)
@@ -26,7 +26,9 @@ struct ContentView: View {
                 }
                 VStack {
                     TextFields(sliderValue: $redValue)
+                        .padding(.bottom, 50)
                     TextFields(sliderValue: $greenValue)
+                        .padding(.bottom, 50)
                     TextFields(sliderValue: $blueValue)
                 }
             }

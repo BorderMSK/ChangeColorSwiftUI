@@ -30,7 +30,6 @@ struct TextFields: View {
                     textValue = "\(lround(value))"
                 })
         }
-        
     }
     private func dissmiss() {
         textValue = "\(lround(sliderValue))"
@@ -38,7 +37,6 @@ struct TextFields: View {
     
     
     private func checkValue() {
-        
         if let textFieldValue = Double(textValue), (0...255).contains(textFieldValue) {
             sliderValue = textFieldValue
         } else {
