@@ -10,11 +10,11 @@ import SwiftUI
 struct TextFields: View {
     @Binding var sliderValue: Double
     @State var alertPresent = false
-    @State private var textValue = ""
+    @State private var textFieldValue = ""
     
     var body: some View {
         VStack {
-            TextField("", text: $textValue, onCommit: checkValue)
+            TextField("", text: $textFieldValue, onCommit: checkValue)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 50)
                 .alert(isPresented: $alertPresent) {
@@ -24,28 +24,24 @@ struct TextFields: View {
                                                       action: dissmiss))
                 }
                 .onAppear {
-                    textValue = "\(lround(sliderValue))"
+                    textFieldValue = "\(lround(sliderValue))"
                 }
                 .onChange(of: sliderValue, perform: { value in
-                    textValue = "\(lround(value))"
+                    textFieldValue = "\(lround(value))"
                 })
         }
     }
     private func dissmiss() {
-        textValue = "\(lround(sliderValue))"
+        textFieldValue = "\(lround(sliderValue))"
     }
-    
-    
     private func checkValue() {
-        if let textFieldValue = Double(textValue), (0...255).contains(textFieldValue) {
+        if let textFieldValue = Double(textFieldValue), (0...255).contains(textFieldValue) {
             sliderValue = textFieldValue
         } else {
             alertPresent.toggle()
         }
     }
 }
-
-
 struct TextFields_Previews: PreviewProvider {
     static var previews: some View {
         TextFields(sliderValue: .constant(0.0))
