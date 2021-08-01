@@ -23,6 +23,12 @@ struct TextFields: View {
                           dismissButton: .destructive(Text("OK"),
                                                       action: dissmiss))
                 }
+                .onAppear {
+                    textValue = "\(lround(sliderValue))"
+                }
+                .onChange(of: sliderValue, perform: { value in
+                    textValue = "\(lround(value))"
+                })
         }
         
     }

@@ -19,7 +19,8 @@ struct MixColor: View {
             .frame(height: 200)
             .cornerRadius(30)
             .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 5))
-            .padding(.bottom, 100)
+            .padding(.bottom, 80)
+            .padding(20)
         
     }
     
