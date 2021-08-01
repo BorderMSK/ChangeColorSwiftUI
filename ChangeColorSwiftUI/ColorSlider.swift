@@ -14,7 +14,7 @@ struct ColorSlider: View {
     
     var body: some View {
         HStack {
-            Text("0")
+            Text("\(lround(value))")
         Slider(value: $value, in: 0...255, step: 1)
             .accentColor(color)
             Text("255")

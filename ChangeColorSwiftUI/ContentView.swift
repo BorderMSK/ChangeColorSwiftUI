@@ -22,6 +22,7 @@ struct ContentView: View {
                     ColorSlider(value: $redValue, color: .red)
                     ColorSlider(value: $greenValue, color: .green)
                     ColorSlider(value: $blueValue, color: .blue)
+                    
                 }
                 VStack {
                     TextFields(sliderValue: $redValue)
